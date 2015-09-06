@@ -1,0 +1,8 @@
+# Step 1
+
+This is the solution for the challenge in step 0. To run the frontend as a container.
+
+1. `docker ps -q | xargs docker stop` stops all running containers
+2. `cd frontend`
+3. `./run.sh`
+4. Open the url provided by the script

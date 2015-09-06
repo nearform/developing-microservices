@@ -70,10 +70,6 @@ var updateChart = function(graph, data) {
 
 
 
-
-/*
- * move this code to the API layer, add receive the data over a web socket
- */
 var pumpData = function() {
   var i = 0;
   var offset = 200;
