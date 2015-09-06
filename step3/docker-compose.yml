@@ -3,7 +3,7 @@ influx:
 serializer:
   # use the build declaration to connect to the serializer code
   # use the link decaration to connect the serializer to the influx container
-  # you will also need ot use the ports and environment declarations
+  # you will also need to use the ports and environment declarations
 frontend:
   # use the build declaration to connect to the frontend code
   # you will also need the ports declaration

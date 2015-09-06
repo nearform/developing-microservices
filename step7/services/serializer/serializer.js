@@ -2,10 +2,22 @@
 
 var seneca = require('seneca')();
 var influx= require('influx');
-var initDb = influx({host: process.env.INFLUX_HOST, username : 'root', password : 'root'});
 
 
-initDb.createDatabase('temperature', function() {
+
+var createDatabase = function(cb) {
+  setTimeout(function() {
+    var initDb = influx({host: process.env.INFLUX_HOST, username : 'root', password : 'root'});
+    initDb.createDatabase('temperature', function(err) {
+      if (err) { console.log('ERROR: ' + err); }
+      cb();
+    });
+  }, 3000);
+};
+
+
+
+createDatabase(function() {
   var db = influx({host: process.env.INFLUX_HOST, username : 'root', password : 'root', database : 'temperature'});
   var ifx = require('./influxUtil')(db);
 
