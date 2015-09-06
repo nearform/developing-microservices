@@ -11,7 +11,7 @@ var _ = require('lodash');
 seneca.client({host: process.env.serializer_HOST, port: process.env.serializer_PORT, pin: {role: 'serialize', cmd: 'read'}});
 seneca.client({host: process.env.actuator_HOST, port: process.env.actuator_PORT, pin: {role: 'actuate', cmd: 'set'}});
 
-app.use('/public', express.static(__dirname + '/../public'));
+app.use('/', express.static(__dirname + '/../public'));
 
 
 
