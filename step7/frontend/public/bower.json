@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "authors": [
+    "Peter Elger <elger.peter@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "jquery": "1.6.2",
+    "jquery-ui": "jqueryui#~1.8.15",
+    "lodash": "~3.10.1",
+    "rickshaw": "~1.5.1"
+  },
+  "resolutions": {
+    "jquery": "1.6.2"
+  }
+}

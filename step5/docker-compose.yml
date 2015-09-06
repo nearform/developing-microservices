@@ -1,0 +1,35 @@
+influx:
+  image: tutum/influxdb
+  container_name: influx
+serializer:
+  build: ./services/serializer/
+  container_name: serializer
+  links:
+    - influx
+  environment:
+    - SERVICE_HOST=0.0.0.0 
+    - SERVICE_PORT=3001 
+    - INFLUX_HOST=influx
+broker:
+  build: ./services/broker/
+  container_name: broker
+  extra_hosts:
+    - "serializer:162.242.195.82"
+  environment:
+    - SERVICE_HOST=0.0.0.0
+    - SERVICE_PORT=8082
+    - serializer_HOST=serializer
+    - serializer_PORT=3001
+  links:
+    - serializer
+sensor:
+  build: ./services/sensor/
+  container_name: sensor
+  links:
+    - broker
+frontend:
+  build: ./frontend/
+  container_name: frontend
+  ports:
+    - "3000:3000"
+
