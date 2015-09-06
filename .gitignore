@@ -20,7 +20,6 @@ mochahelper.js
 dist
 .tmp
 .sass-cache
-bower_components
 options.mine.js
 db/
 coverage
