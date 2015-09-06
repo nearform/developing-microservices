@@ -12,8 +12,20 @@ serializer:
     - SERVICE_HOST=0.0.0.0 
     - SERVICE_PORT=3001 
     - INFLUX_HOST=influx
+#broker:
+  # use the build declaration to connect to the broker code
+  # use the link declaration to connect the broker to the serializer service
+  # you will also need to use environment declarations
+#sensor:
+  # use the build declaration to connect to the sensor code
+  # use the link declaration to connect the broker to the broker
 frontend:
   build: ./frontend/
   container_name: frontend
   ports:
     - "3000:3000"
+
+
+
+
+
