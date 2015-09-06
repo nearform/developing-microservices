@@ -1,6 +1,6 @@
 # Step 5
 
-This is the solution for the challenge in step 4.
+This is the solution for the challenge in step 5.
 To run the microservices as a container:
 
 1. `docker ps -q | xargs docker stop` stops all running containers
