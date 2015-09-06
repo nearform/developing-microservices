@@ -1,7 +1,9 @@
 influx:
   image: tutum/influxdb
+  container_name: influx
 serializer:
   build: ./services/serializer/
+  container_name: serializer
   links:
     - influx
   ports:
@@ -12,5 +14,6 @@ serializer:
     - INFLUX_HOST=influx
 frontend:
   build: ./frontend/
+  container_name: frontend
   ports:
     - "3000:3000"
