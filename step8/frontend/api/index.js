@@ -37,6 +37,7 @@ setInterval(function() {
     _.each(data[0], function(point) {
       if (moment(point.time).unix() > lastEmitted) {
         lastEmitted = moment(point.time).unix();
+        point.time = (new Date(point.time)).getTime();
         toEmit.push(point);
       }
     });

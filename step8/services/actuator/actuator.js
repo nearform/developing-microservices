@@ -10,7 +10,6 @@ var seneca = require('seneca')();
 
 seneca.add({role: 'actuate', cmd: 'set'}, function(args, cb) {
   var payload = JSON.stringify({offset:  parseInt(args.offset)});
-  console.log('ACUTAUTE ====> ' + payload);
   cb(null, {});
 });
 

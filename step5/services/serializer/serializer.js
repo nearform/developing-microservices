@@ -17,7 +17,7 @@ var createDatabase = function(cb) {
 
 
 
-createDatabase(function(createErr) {
+createDatabase(function() {
   var db = influx({host: process.env.INFLUX_HOST, username : 'root', password : 'root', database : 'temperature'});
   var ifx = require('./influxUtil')(db);
 

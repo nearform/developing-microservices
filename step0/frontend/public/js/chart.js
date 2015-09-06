@@ -62,7 +62,7 @@ var updateChart = function(graph, data) {
   }
   data.forEach(function(point) {
     if (point.sensorId === '1') {
-      graph.series[0].data.push({x: new Date(point.time).getTime() / 1000, y: point.temperature});
+      graph.series[0].data.push({x: Math.round(point.time/1000), y: point.temperature});
     }
   });
   graph.render();

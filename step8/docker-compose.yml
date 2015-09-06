@@ -45,7 +45,7 @@ frontend:
   environment:
     - serializer_HOST=serializer
     - serializer_PORT=3001
-    - actuator_HOST=acutator
+    - actuator_HOST=actuator
     - actuator_PORT=3002
   ports:
     - "3000:3000"
