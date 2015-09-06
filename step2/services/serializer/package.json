@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "influx": "^4.0.1",
     "seneca": "^0.6.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0"
   }
 }
