@@ -34,6 +34,4 @@ You should test the read handler from within the frontend container, via
 `docker exec`:
 
 1. `docker exec -ti frontend /bin/bash`
-2. `apt-get update`
-3. `apt-get install curl`
-4. `curl -X POST -d "{\"role\": \"serialize\", \"cmd\": \"read\", \"sensorId\": \"1\", \"start\": 1441400000000, \"end\": 1541497000671}" http://serializer:3001/act  --header "Content-Type:application/json`
+4. `curl -X POST -d "{\"role\": \"serialize\", \"cmd\": \"read\", \"sensorId\": \"1\", \"start\": 1441400000000, \"end\": 1541497000671}" http://serializer:3001/act  --header "Content-Type:application/json"`
