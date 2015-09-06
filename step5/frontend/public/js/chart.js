@@ -55,6 +55,7 @@ var initChart = function() {
 
   var socket = io();
   socket.on('data', function(data) {
+    console.log(JSON.stringify(data, null, 2));
     updateChart(graph, data);
   });
 };
