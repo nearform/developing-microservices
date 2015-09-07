@@ -32,11 +32,11 @@ setInterval(function() {
     if (toEmit.length > 0) {
       console.log('will emit');
       console.log(toEmit);
+      io.emit('data', toEmit);
     }
     else {
       console.log('no emit');
     }
-    io.emit('data', toEmit);
   });
 }, 1000);
 
