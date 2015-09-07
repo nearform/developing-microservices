@@ -1,2 +1,0 @@
-eval $(docker-machine env demo)
-
