@@ -12,10 +12,15 @@ charts from influx.
 
 ## Challenge
 
-Your challenge is to wire up actuator micro-service. The actuator service is provided for you in services/actuator.
-Add this into your docker-compose.yml file and restart the system. You can test the actuator service by running the
-following:
+Your challenge is to wire up the actuator micro-service. The actuator service is provided for you in services/actuator.
+The actuator service will send a new offset message to the sensor via the mqtt broker. To enable the actuator you will
+need to:
 
-1. `docker exec -ti frontend /bin/bash`
-4. `curl -X POST -d "{\"role\": \"actuate\", \"cmd\": \"set\", \"sensorId\": \"1\", \"offset\": 1000}" http://actuator:3002/act  --header "Content-Type:application/json"`
+1. add an API end point in frontend/api/index.js that responds to /set as a route
+2. a button and input field have been provided on the front end to call the /set route
+3. wire up the actuator into the docker-compose.yml
+
+
+Once you have your code ready, rebuild and restart using docker-compose. You should see data flowing as before. Try 
+applying a value of 500 to the actuator and you should see the cahrt jump.
 

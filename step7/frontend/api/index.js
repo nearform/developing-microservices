@@ -9,9 +9,13 @@ var moment = require('moment');
 var _ = require('lodash');
 
 seneca.client({host: process.env.serializer_HOST, port: process.env.serializer_PORT, pin: {role: 'serialize', cmd: 'read'}});
+// pin the actuator service here
 
 app.use('/', express.static(__dirname + '/../public'));
 
+/*
+ * add a new endpoint here to call the actuator service
+ */
 
 var lastEmitted = 0;
 setInterval(function() {

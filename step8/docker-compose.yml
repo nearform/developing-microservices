@@ -18,7 +18,6 @@ actuator:
   environment:
     - SERVICE_HOST=0.0.0.0 
     - SERVICE_PORT=3002
-    - INFLUX_HOST=influx
 broker:
   build: ./services/broker/
   container_name: broker

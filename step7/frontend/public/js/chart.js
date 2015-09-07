@@ -75,7 +75,17 @@ var updateChart = function(graph, data) {
 
 
 
+var initControls = function() {
+  $('#setOffset').click(function() {
+    $.get('/set?offset=' + $('#offset').val(), function() {
+    });
+  });
+};
+
+
+
 $(document).ready(function() {
   initChart();
+  initControls();
 });
 

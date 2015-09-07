@@ -34,15 +34,3 @@ server.published = function (packet, client, cb) {
   }
 };
 
-
-
-seneca.add({role: 'actuate', cmd: 'set'}, function(args, callback) {
-  var payload = JSON.stringify({'offset':  parseInt(args.offset) });
-  server.publish({cmd: 'publish', topic: 'temperature/1/set', payload: new Buffer(payload), qos: 0, retain: true}, function (err) {
-    callback(err);
-  });
-});
-
-
-seneca.listen({host: process.env.SERVICE_HOST, port: process.env.SERVICE_PORT});
-
