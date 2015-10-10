@@ -39,23 +39,37 @@ A database in a container that the serialiser uses for robust storage of data.
 ### Rickshaw Charts
 A charting library for the web.
 
+http://code.shutterstock.com/rickshaw/
+
 ### Express
 A HTTP Web server library.
+
+http://expressjs.com/
 
 ### Socket.io
 A socket based library for realtime communication to the browser.
 
+http://socket.io/
+
 ### Seneca
 A pattern matching Microservices library.
+
+http://senecajs.org/
 
 ### Mosca / MQTT
 An MQTT broker that enables robust message, particularly suited to IoT.
 
+https://github.com/mcollina/mosca
+
 ### InfluxDb
 A time series database particularly suited to time sensitive data.
 
+https://influxdb.com/
+
 ### Docker
 A container engine.
+
+https://www.docker.com
 
 ## Docker command cheatsheet
 
