@@ -89,9 +89,13 @@ Will compose your services together based off a root _docker-compose.yml_ file.
 ##### `docker-compose up`
 Runs your compose services.
 
+For a full cheatsheet on docker please see the [Docker Cheat Sheet][] repo.
+
 ## Need Help
 
 - @mcollina
 - @pelger
 - @mcdonnelldean
 - @davidmarkclem
+
+[Docker Cheat Sheet]: https://github.com/wsargent/docker-cheat-sheet
