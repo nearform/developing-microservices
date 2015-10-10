@@ -71,7 +71,38 @@ A container engine.
 
 https://www.docker.com
 
+## Setting up
+To complete this workshop you will need both the offical node image
+as well as the influxDb image. These can be pulled from Docker Hub
+or via a usb key if applicable.
+
+##### 1 - `docker-machine start default`
+Start your default machine
+
+##### 2 - `eval "$(docker-machine env default)"`
+Add the correct env variables to your shell
+
+##### 3 - `docker ps`
+Confirm that docker is available to use.
+
+##### 4 - `docker import < node.tar`
+Import the offical node image.
+
+##### 5 -`docker import < influx.tar`
+Import the influx db image.
+
+##### 6 - `docker images`
+Confirm that you have both influx and node.
+
 ## Docker command cheatsheet
+We have included a set of common commands for docker and docker machine, including
+a short decscription of what they do below.
+
+##### `eval "$(docker-machine env NAME)"`
+Sets up your current shell with the variables from `docker-machine env NAME`.
+
+##### `docker import < FILENAME`
+Imports a tarball (or other file) image into docker. 
 
 ##### `docker ps`
 Lists all of your containers.
@@ -79,17 +110,17 @@ Lists all of your containers.
 ##### `docker images`
 Lists all of your images, these are the building blocks for your containers.
 
-##### `docker-machine start <name>`
+##### `docker-machine start NAME`
 Starts your docker virtual machine (only applicable to non Linux).
 
-##### `docker-machine stop <name>`
+##### `docker-machine stop NAME`
 Stops your docker virtual machine (only applicable to non Linux).
 
-##### `docker-machine env <name>`
+##### `docker-machine env NAME`
 Lists the needed ENV variables needed to connect to your virtual machine.
 
-##### `eval "$(docker-machine env <name>)"`
-Sets up your current shell with the variables from `docker-machine env <name>`.
+##### `eval "$(docker-machine env NAME)"`
+Sets up your current shell with the variables from `docker-machine env NAME`.
 
 ##### `docker-machine ip`
 Will return the ip address your docker machine is running on.
