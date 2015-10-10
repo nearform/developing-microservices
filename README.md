@@ -3,12 +3,12 @@
 This workshop will walk you through creating a simple live fed graph
 using a Microservices architecture in node.js.
 
-## The App
+## The app
 The app your are building is a sensor fed chart that provides realtime
 data from a dummy sensor. This 'app' is broken down into a number of
 individually deployed containers, each with it's own well define concern.
 
-### Web app
+### Frontend
 A simple web app that uses JQuery, Rickshaw charts, and Socket.io to show
 a realtime graph of data being emitted by our sensor. This app has an API
 which is included in the same microservice who's sole job is to talk to
@@ -25,14 +25,37 @@ receives from the actuator.
 A service that handles reads and writes in serial fashion to the database. Uses
 Socket.io to update the web app and thus the graph, in real time.
 
-### MQTT
+### Broker
 A robust messaging layer build for IoT based devices. We use this to wire up
 the actuator, serializer and sensor in a loosely coupled fashion.
 
-### InfluxDB
-A timeseries database that the serialiser uses for robust storage of data.
+### Influx
+A database in a container that the serialiser uses for robust storage of data.
 
-## Useful commands
+## The libraries
+
+### Rickshaw Charts
+A charting library for the web.
+
+### Express
+A HTTP Web server library.
+
+### Socket.io
+A socket based library for realtime communication to the browser.
+
+### Seneca
+A pattern matching Microservices library.
+
+### Mosca / MQTT
+An MQTT broker that enables robust message, particularly suited to IoT.
+
+### InfluxDb
+A time series database particularly suited to time sensitive data.
+
+### Docker
+A container engine.
+
+## Docker command cheatsheet
 
 ##### `docker ps`
 Lists all of your containers.
