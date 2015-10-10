@@ -132,7 +132,7 @@ Will stop all running containers based on the list from `docker ps`.
 Will compose your services together based off a root _docker-compose.yml_ file.
 
 ##### `docker-compose up`
-Runs your compose services.
+Runs your composed services (asumming you are in the correct directory.
 
 For a full cheatsheet on docker please see the [Docker Cheat Sheet][] repo.
 
