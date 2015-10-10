@@ -1,4 +1,6 @@
-# msworkshop
+![nearform](https://rawgit.com/mcollina/enterprise-iot-systems-with-mqtt-and-node/master/src/images/nearform.svg)
+
+# Developing Microservices
 
 This workshop will walk you through creating a simple live fed graph
 using a Microservices architecture in node.js.
