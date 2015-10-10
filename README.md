@@ -85,10 +85,10 @@ Add the correct env variables to your shell
 ##### 3 - `docker ps`
 Confirm that docker is available to use.
 
-##### 4 - `docker import < node.tar`
+##### 4 - `docker import node.tar node`
 Import the offical node image.
 
-##### 5 -`docker import < influx.tar`
+##### 5 -`docker import influx.tar tutum/influxdb`
 Import the influx db image.
 
 ##### 6 - `docker images`
