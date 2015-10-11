@@ -1,9 +1,12 @@
 ![nearform](https://rawgit.com/mcollina/enterprise-iot-systems-with-mqtt-and-node/master/src/images/nearform.svg)
 
 # Developing Microservices
+This workshop will walk you through creating and composing a set of
+microservices using docker and docker-compose.
 
-This workshop will walk you through creating a simple live fed graph
-using a Microservices architecture in node.js.
+__Note:__ This is an intermediate level workshop. You should be comfortable
+with creating node.js modules and application. A basic understanding of docker
+and it's principles is also recommended.
 
 ## The app
 The app your are building is a sensor fed chart that provides realtime
