@@ -1,4 +1,4 @@
-![nearform](https://rawgit.com/mcollina/enterprise-iot-systems-with-mqtt-and-node/master/src/images/nearform.svg)
+![nearform](https://rawgit.com/nearform/msworkshop/master/assets/banner.svg)
 
 # Developing Microservices
 This workshop will walk you through creating and composing a set of
@@ -105,7 +105,7 @@ a short decscription of what they do below.
 Sets up your current shell with the variables from `docker-machine env NAME`.
 
 ##### `docker import < FILENAME`
-Imports a tarball (or other file) image into docker. 
+Imports a tarball (or other file) image into docker.
 
 ##### `docker ps`
 Lists all of your containers.
