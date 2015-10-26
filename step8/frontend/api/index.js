@@ -4,7 +4,7 @@ var express = require('express');
 var seneca = require('seneca')();
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var webStream = require('./webStream')(http);
 var moment = require('moment');
 var _ = require('lodash');
 
@@ -44,19 +44,13 @@ setInterval(function() {
     if (toEmit.length > 0) {
       console.log('will emit');
       console.log(toEmit);
+      webStream.emit(toEmit);
     }
     else {
       console.log('no emit');
     }
-    io.emit('data', toEmit);
   });
 }, 1000);
-
-
-
-io.on('connection', function(/*socket*/){
-  console.log('client connected');
-});
 
 
 

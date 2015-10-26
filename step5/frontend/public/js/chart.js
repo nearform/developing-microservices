@@ -1,6 +1,7 @@
 'use strict';
 
 var graph;
+var websocket = require('websocket-stream');
 
 
 
@@ -53,10 +54,9 @@ var initChart = function() {
   }
   graph.render();
 
-  var socket = io();
-  socket.on('data', function(data) {
-    console.log(JSON.stringify(data, null, 2));
-    updateChart(graph, data);
+  var stream = websocket(document.URL.replace('http', 'ws'));
+  stream.on('data', function(data) {
+    updateChart(graph, JSON.parse(data));
   });
 };
 
