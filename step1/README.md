@@ -9,12 +9,15 @@ This is the solution for the challenge in step 0. To run the frontend as a conta
 
 ## Challenge
 Right now, our web app's backend doesn't do much, all of the work to plot the graph happens on the
-client; Lets change that. Since we require a real time feed for our data, we will use socket.io.
+client; Lets change that. Since we require a real time feed for our data, we will use websocket-stream and browserify.
+We have provided some addtional code in frontend/api/webStream.js that provides an emit function.
 
-1. Add socket.io to `./frontend/api/index.js`
-2. Move the pumpData function from `./frontend/public/js/chart.js L73-L81` to the above
-3. Wire up the pumpData function to an `io.emit()` event to emit random data to the client
-4. Add a socket.io `data` event to `./frontend/public/js/chart.js L54` to handle the data
-5. Rebuild your container and run, just like in the last step
+1. Move the pumpData function from `./frontend/public/js/chart.js L73-L81` to `./frontend/api/index.js`
+2. Wire up the pumpData function to the `webStream.emit()` function to emit random data to the client
+3. Add `require('websocket-stream')` to `frontend/public/js/chart.js` 
+4. Add a `data` event handler to `./frontend/public/js/chart.js L54` to handle the data
+5. in `frontend/public/js` run `npm install` to pull in the required modules on the front end
+6. in `frontend/public/js` run `browserify chart.js -o bundle.js` and update index.html to include bundle.js instead of chart.js
+7. Rebuild your container and run, just like in the last step
 
 [valid Dockerfile]: ./frontend/Dockerfile
