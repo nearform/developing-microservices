@@ -2,12 +2,12 @@
 
 This is the solution for the challenge in step 1. To run the frontend as a container:
 
-1. `docker ps -q | xargs docker stop` stops all running containers
-1. docker build -t frontend .
-2. docker run -p 3000:3000 -d frontend
-3. docker-machine ip
-4. point your browser to the docker machine ip address, you should now see the application
-   running in your container
+1. Update your index.js to match a [valid one][]
+2. Use `docker ps -q | xargs docker stop` stops all running containers
+3. Run `docker build -t frontend .` from the root folder
+4. Run `docker run -p 3000:3000 -d frontend`
+5. Get your ip address with `docker-machine ip`
+6. Point your browser to http://localhost:3000
 
 ## Challenge
 
@@ -58,3 +58,5 @@ and then:
 use temperature;
 select * from temperature;
 ```
+
+[valid one]: ./frontend/api/index.js
