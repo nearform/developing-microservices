@@ -5,6 +5,7 @@ To run the serializer microservice as a container:
 
 1. `docker ps -q | xargs docker stop` stops all running containers
 2. `cd services/serializer`
+3. Run `docker pull tutum/influxdb` to pull the influxdb image.
 3. Run influxdb with: `docker run -d -p 8083:8083 -p 8086:8086 --expose 8090 --expose 8099 tutum/influxdb`
 3. `./runContainer.sh`
 4. Run `curl -X POST -d "{\"role\": \"serialize\", \"cmd\": \"write\", \"sensorId\": \"1\", \"temperature\": 32}" http://`docker-machine ip default`:3001/act  --header "Content-Type:application/json"
