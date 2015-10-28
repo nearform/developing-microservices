@@ -32,7 +32,7 @@ websocket-stream to update the web app and thus the graph, in real time.
 
 ### Broker
 A robust messaging layer build for IoT based devices. We use this to wire up
-the actuator, serializer and sensor in a loosely coupled fashion.
+the actuator, serialiser and sensor in a loosely coupled fashion.
 
 ### Influx
 A database in a container that the serialiser uses for robust storage of data.
@@ -69,7 +69,7 @@ An MQTT broker that enables robust message, particularly suited to IoT.
 
 https://github.com/mcollina/mosca
 
-### InfluxDb
+### InfluxDB
 A time series database particularly suited to time sensitive data.
 
 https://influxdb.com/
@@ -81,7 +81,7 @@ https://www.docker.com
 
 ## Setting up
 To complete this workshop you will need both the offical node image
-as well as the influxDb image. These can be pulled from Docker Hub
+as well as the InfluxDB image. These can be pulled from Docker Hub
 or via a usb key if applicable.
 
 ##### 1 - `docker-machine start default`
@@ -146,9 +146,10 @@ For a full cheatsheet on docker please see the [Docker Cheat Sheet][] repo.
 
 ## Need Help
 
-- @mcollina
-- @pelger
-- @mcdonnelldean
-- @davidmarkclem
+- [@matteocollina](https://twitter.com/matteocollina)
+- [@pelger](https://twitter.com/pelger)
+- [@mcdonnelldean](https://twitter.com/mcdonnelldean)
+- [@davidmarkclem](https://twitter.com/davidmarkclem)
+- [@wpreul](https://twitter.com/wpreul)
 
 [Docker Cheat Sheet]: https://github.com/wsargent/docker-cheat-sheet
