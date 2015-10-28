@@ -23,3 +23,7 @@ yml file to launch all our containers with a single command.
 
 A skeleton `docker-compose.yml` is provided for you, you just need to
 fill in the settings for the various containers.
+
+__Hint:__ You can see a completed `docker-compose.yaml` [here][]
+
+[here]: ../step4/docker-compose.yml
