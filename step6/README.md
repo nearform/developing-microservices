@@ -24,8 +24,10 @@ the chart populated as before.
 
 1. In index.js add a call to `seneca.client()` to allow messages to be sent from the frontend to the serializer
 2. Remove the `readRandom` function and the `i` variable
-3: Make a call to `seneca.act()` in setInterval, `({role: 'serialize', cmd: 'read', sensorId: sensorId, start: start, end: end}`
-4: In the `seneca.act` callback make a call to `handleRead()` passing in the data object from the callback
+3. Make a call to `seneca.act()` in setInterval, use the hint below if you get stuck
+4. In the `seneca.act` callback make a call to `handleRead()` passing in the data object from the callback
+
+__Hint:__ `{role: 'serialize', cmd: 'read', sensorId: sensorId, start: start, end: end}`
 
 If you have wired everything up correctly you should see data streaming to the chart in the browser:
 
