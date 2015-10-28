@@ -15,7 +15,7 @@ which docker will need to build a container.
 The steps to complete this challenge are:
 
 1. Create a file named `Dockerfile` in the `./step0/frontend` folder.
-2. Add a `FROM` command specifying the `node` as the base image.
+2. Add a `FROM` command specifying `node` as the base image.
 3. Add an `ADD` command specifying the current working directory.
 4. Add a `RUN` command that runs `npm install`, make sure this runs from the correct directory.
 5. Add a `CMD` command to run the front end just as you would from a terminal window.
@@ -28,7 +28,7 @@ below:
 1. Run `docker build -t frontend .`
 2. Run `docker run -p 3000:3000 -d frontend`
 
-Finally to access your running containerized service in the browser you will first need to find the
+Finally, to access your running containerized service in the browser, you will first need to find the
 IP address your docker virtual machine is running on. __NOTE:__ if you are running on Linux your IP
 address is simply localhost as docker runs natively on Linux and not in a virtual machine.
 
