@@ -5,16 +5,16 @@ This workshop will walk you through creating and composing a set of
 microservices using docker and docker-compose.
 
 __Note:__ This is an intermediate level workshop. You should be comfortable
-with creating node.js modules and application. A basic understanding of docker
+with creating node.js modules and applications. A basic understanding of docker
 and it's principles is also recommended.
 
 ## The app
-The app your are building is a sensor fed chart that provides realtime
+The app you're building is a sensor fed chart that provides realtime
 data from a dummy sensor. This 'app' is broken down into a number of
-individually deployed containers, each with it's own well define concern.
+individually deployed containers, each with its own well defined concern.
 
 ### Frontend
-A simple web app that uses JQuery, Rickshaw charts, and webwockets to show
+A simple web app that uses JQuery, Rickshaw charts, and WebSockets to show
 a realtime graph of data being emitted by our sensor. This app has an API
 which is included in the same microservice who's sole job is to talk to
 and read from other microservices.
@@ -23,7 +23,7 @@ and read from other microservices.
 A small microservice that causes reads on the sensor based on an offset.
 
 ### Sensor
-A dummy temperature sensor that sends out variying values based on what it
+A dummy temperature sensor that sends out varying values based on what it
 receives from the actuator.
 
 ### Serialisation
@@ -32,7 +32,7 @@ websocket-stream to update the web app and thus the graph, in real time.
 
 ### Broker
 A robust messaging layer build for IoT based devices. We use this to wire up
-the actuator, serializer and sensor in a loosely coupled fashion.
+the actuator, serialiser and sensor in a loosely coupled fashion.
 
 ### Influx
 A database in a container that the serialiser uses for robust storage of data.
@@ -69,7 +69,7 @@ An MQTT broker that enables robust message, particularly suited to IoT.
 
 https://github.com/mcollina/mosca
 
-### InfluxDb
+### InfluxDB
 A time series database particularly suited to time sensitive data.
 
 https://influxdb.com/
@@ -81,7 +81,7 @@ https://www.docker.com
 
 ## Setting up
 To complete this workshop you will need both the offical node image
-as well as the influxDb image. These can be pulled from Docker Hub
+as well as the InfluxDB image. These can be pulled from Docker Hub
 or via a usb key if applicable.
 
 ##### 1 - `docker-machine start default`
@@ -146,9 +146,10 @@ For a full cheatsheet on docker please see the [Docker Cheat Sheet][] repo.
 
 ## Need Help
 
-- @mcollina
-- @pelger
-- @mcdonnelldean
-- @davidmarkclem
+- [@matteocollina](https://twitter.com/matteocollina)
+- [@pelger](https://twitter.com/pelger)
+- [@mcdonnelldean](https://twitter.com/mcdonnelldean)
+- [@davidmarkclem](https://twitter.com/davidmarkclem)
+- [@wpreul](https://twitter.com/wpreul)
 
 [Docker Cheat Sheet]: https://github.com/wsargent/docker-cheat-sheet
