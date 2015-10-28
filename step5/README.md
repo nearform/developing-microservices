@@ -5,23 +5,11 @@ This is the solution for the challenge in step 5.
 To run the microservices as a container:
 
 1. Update your docker compose to match a [valid one][]
-1. Run `docker ps -q | xargs docker stop` to stop all running containers
-2. Run `docker-compose build` to rebuild all containers
-3. Run `docker-compose up` to start all containers
-
-Test the application like previous steps, you should be able to read
-the data from influxdb:
-
-```
-docker exec -ti <containerID> /opt/influxdb/influx
-```
-
-and then:
-
-```
-use temperature;
-select count(temperature) from temperature;
-```
+2. Run `docker ps -q | xargs docker stop` to stop all running containers
+3. Run `docker-compose build` to rebuild all containers
+4. Run `docker-compose up` to start all containers
+5. Run `docker exec -ti <containerID> /opt/influxdb/influx` to connect to influxdb
+6. Run `use temperature; select count(temperature) from temperature;` to see the new data
 
 ## Challenge
 
