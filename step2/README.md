@@ -5,12 +5,12 @@ that sends data down the websocket stream each second. `frontend/public/js/code.
 to recieve this data. `bundle.js` is the browserifed version of code.js. `index.html` has been modified 
 in order to include `bundle.js`. You can run this container in the following manner:
 
-1. `docker ps -q | xargs docker stop` stops all running containers
-1. docker build -t frontend .
-2. docker run -p 3000:3000 -d frontend
-3. docker-machine ip
-4. point your browser to the docker machine ip address, you should now see the application
-   running in your container
+1. Update your index.js to match a [valid one][]
+2. Use `docker ps -q | xargs docker stop` stops all running containers
+3. Run `docker build -t frontend .` from the root folder
+4. Run `docker run -p 3000:3000 -d frontend`
+5. Get your ip address with `docker-machine ip`
+6. Point your browser to http://localhost:3000
 
 ## Challenge
 
