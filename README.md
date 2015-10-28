@@ -5,16 +5,16 @@ This workshop will walk you through creating and composing a set of
 microservices using docker and docker-compose.
 
 __Note:__ This is an intermediate level workshop. You should be comfortable
-with creating node.js modules and application. A basic understanding of docker
+with creating node.js modules and applications. A basic understanding of docker
 and it's principles is also recommended.
 
 ## The app
-The app your are building is a sensor fed chart that provides realtime
+The app you're building is a sensor fed chart that provides realtime
 data from a dummy sensor. This 'app' is broken down into a number of
-individually deployed containers, each with it's own well define concern.
+individually deployed containers, each with its own well defined concern.
 
 ### Frontend
-A simple web app that uses JQuery, Rickshaw charts, and webwockets to show
+A simple web app that uses JQuery, Rickshaw charts, and WebSockets to show
 a realtime graph of data being emitted by our sensor. This app has an API
 which is included in the same microservice who's sole job is to talk to
 and read from other microservices.
@@ -23,7 +23,7 @@ and read from other microservices.
 A small microservice that causes reads on the sensor based on an offset.
 
 ### Sensor
-A dummy temperature sensor that sends out variying values based on what it
+A dummy temperature sensor that sends out varying values based on what it
 receives from the actuator.
 
 ### Serialisation
