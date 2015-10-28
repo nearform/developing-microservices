@@ -22,4 +22,4 @@ generator in the frontend/api/index.js with a call to read data from the seriali
 completed, restart the system using docker-compose and open the front end in a browser. You should be able to see
 the chart populated as before.
 
-[valid one]: ./step6/services/serializer/serializer.js
+[valid one]: ./services/serializer/serializer.js
