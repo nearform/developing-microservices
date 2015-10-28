@@ -1,7 +1,5 @@
 # Step 7
-
-This is the solution for the challenge in step 7
-To run the microservices as a container:
+This is the solution for the challenge in step 7:
 
 1. Update your frontend/api/index.js file to match a [valid one][]
 2. Run `docker ps -q | xargs docker stop` to stop all running containers
