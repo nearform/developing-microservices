@@ -1,5 +1,5 @@
 # Step 1
-This is the solution for the challenge in step 0. To run the frontend as a container,
+This is the solution for the challenge in step 0:
 
 1. Add a [valid Dockerfile][] to `/frontend`
 2. Run `docker build -t frontend .` from the root folder
