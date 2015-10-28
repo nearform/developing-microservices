@@ -62,3 +62,4 @@ use temperature;
 select * from temperature;
 ```
 
+[valid one]: ./frontend/api/index.js
