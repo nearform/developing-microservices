@@ -2,8 +2,6 @@
 
 This is the solution for the challenge in step 5.
 
-To run the microservices as a container:
-
 1. Update your docker compose to match a [valid one][]
 2. Run `docker ps -q | xargs docker stop` to stop all running containers
 3. Run `docker-compose build` to rebuild all containers
