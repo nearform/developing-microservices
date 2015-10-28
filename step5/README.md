@@ -1,11 +1,13 @@
 # Step 5
 
 This is the solution for the challenge in step 5.
+
 To run the microservices as a container:
 
-1. `docker ps -q | xargs docker stop` stops all running containers
-2. `docker-compose build`
-3. `docker-compose up`
+1. Update your docker compose to match a [valid one][]
+1. Run `docker ps -q | xargs docker stop` to stop all running containers
+2. Run `docker-compose build` to rebuild all containers
+3. Run `docker-compose up` to start all containers
 
 Test the application like previous steps, you should be able to read
 the data from influxdb:
@@ -35,3 +37,6 @@ You should test the read handler from within the frontend container, via
 
 1. `docker exec -ti frontend /bin/bash`
 4. `curl -X POST -d "{\"role\": \"serialize\", \"cmd\": \"read\", \"sensorId\": \"1\", \"start\": 1441400000000, \"end\": 1541497000671}" http://serializer:3001/act  --header "Content-Type:application/json"`
+
+
+[valid one]: ./docker-compose.yml
