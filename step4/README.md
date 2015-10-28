@@ -33,3 +33,12 @@ To complete this challenge you will need to add two new entries to the [docker-c
 3. Add a link entry with the name of the broker service as it's value
 
 If you do this correctly, you should be able to see data streaming into
+influxdb from the sensor through the broker. To confirm,
+
+1. Run `docker ps -q | xargs docker stop` to stop all running containers
+2. Run `docker-compose build` to rebuild all containers
+3. Run `docker-compose up` to start all containers
+4. Run `docker exec -ti <containerID> /opt/influxdb/influx` to connect to influxdb
+5. Run `use temperature; select count(temperature) from temperature;` to see the new data
+
+[docker-compose.yml]: ./docker-compose.yml
