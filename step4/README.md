@@ -17,4 +17,5 @@ needs to connnect to the serializer microservice that you wired up in
 the previous step.
 
 If you do this correctly, you should be able to see data streaming into
-influxdb from the sensor through the broker.
+influxdb from the sensor through the broker when you start the system with `docker-compose up`
+
